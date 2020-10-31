@@ -1,0 +1,25 @@
+﻿<Window x:Class="MyJukeboxDbTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyJukeboxDbTools"
+        mc:Ignorable="d"
+        Title="MyJukeboxDbTools" Height="237" Width="400" WindowStartupLocation="CenterScreen" Background="#FFBAFFE8" MouseLeftButtonDown="Move_Window">
+    <DockPanel>
+        <StatusBar x:Name="statusbar" DockPanel.Dock="Bottom" Height="24" Background="Beige">
+            <StatusBarItem x:Name="statusText" Content=""/>
+        </StatusBar>
+        <StackPanel DockPanel.Dock="Bottom" Margin="20,0" >
+            <Button x:Name="buttonStart" Content="Start" Width="50" Margin="6" HorizontalAlignment="Center"
+                    Click="buttonStart_Click"/>
+        </StackPanel>        
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Vertical" Height="180">
+                <CheckBox x:Name="checkboxFullpathfromdb" Content="Create full Pathlist from Database" IsThreeState="False" Margin="10"/>
+                <CheckBox x:Name="checkboxFullpathfromfile" Content="Create full Pathlist from File" IsThreeState="False" Margin="10"/>
+                <CheckBox x:Name="checkboxOpenImporter" Content="Open Mp3 Importer" IsThreeState="False" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>
