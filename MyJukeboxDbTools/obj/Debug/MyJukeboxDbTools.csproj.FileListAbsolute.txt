@@ -67,3 +67,5 @@ A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\
 A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\MyJukeboxDbTools.csproj.CopyComplete
 A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\MyJukeboxDbTools.exe
 A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\MyJukeboxDbTools.pdb
+A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\App.baml
+A:\Source\Repos\90_Work\WPF\MyTools\MyJukeboxDbTools\MyJukeboxDbTools\obj\Debug\MyJukeboxDbTools.csprojAssemblyReference.cache

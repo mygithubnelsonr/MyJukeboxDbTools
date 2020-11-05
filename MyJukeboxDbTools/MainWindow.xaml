@@ -5,21 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyJukeboxDbTools"
         mc:Ignorable="d"
-        Title="MyJukeboxDbTools" Height="237" Width="400" WindowStartupLocation="CenterScreen" Background="#FFBAFFE8" MouseLeftButtonDown="Move_Window">
+        Title="MyJukeboxDbTools" Height="237" Width="400" WindowStartupLocation="CenterScreen" Background="{StaticResource WindowBackgroundBrush}" MouseLeftButtonDown="Move_Window">
     <DockPanel>
-        <StatusBar x:Name="statusbar" DockPanel.Dock="Bottom" Height="24" Background="Beige">
-            <StatusBarItem x:Name="statusText" Content=""/>
-        </StatusBar>
-        <StackPanel DockPanel.Dock="Bottom" Margin="20,0" >
-            <Button x:Name="buttonStart" Content="Start" Width="50" Margin="6" HorizontalAlignment="Center"
-                    Click="buttonStart_Click"/>
-        </StackPanel>        
-        <StackPanel Orientation="Vertical" Margin="20">
-            <StackPanel Orientation="Vertical" Height="180">
-                <CheckBox x:Name="checkboxFullpathfromdb" Content="Create full Pathlist from Database" IsThreeState="False" Margin="10"/>
-                <CheckBox x:Name="checkboxFullpathfromfile" Content="Create full Pathlist from File" IsThreeState="False" Margin="10"/>
-                <CheckBox x:Name="checkboxOpenImporter" Content="Open Mp3 Importer" IsThreeState="False" Margin="10"/>
+        <Grid Margin="10" Background="{StaticResource MainGridBackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" Margin="10" Background="{StaticResource StackpanelBackgroundBrush}">
+                <StackPanel Orientation="Vertical">
+                    <CheckBox x:Name="checkboxFullpathfromdb" Content="Create full Pathlist from Database" IsThreeState="False" Margin="10"/>
+                    <CheckBox x:Name="checkboxFullpathfromfile" Content="Create full Pathlist from File" IsThreeState="False" Margin="10"/>
+                    <CheckBox x:Name="checkboxOpenImporter" Content="Open Mp3 Importer" IsThreeState="False" Margin="10"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+            <Button Grid.Row="1" x:Name="buttonStart" Content="Start" Margin="6" Width="80" Height="24"
+                    HorizontalAlignment="Center"
+                    Click="buttonStart_Click">
+                <Button.Style>
+                    <Style TargetType="Button" >
+                        <Setter Property="Background" Value="#FF032034"/>
+                        <Setter Property="FontSize" Value="12"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderBrush" Value="#FF1667AA"/>
+                        <Setter Property="BorderThickness" Value="2"/>
+                        <Setter Property="Foreground" Value="AliceBlue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <!--<Setter Property="Margin" Value="20,10,20,0"/>-->
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderBrush" Value="Blue"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Border Grid.Row="2" BorderBrush="#FF054F66" BorderThickness="1">
+                <StatusBar x:Name="statusbar" Height="22" Foreground="AntiqueWhite"
+                       BorderBrush="Aquamarine"
+                       Background="{StaticResource MainGridBackgroundBrush}">
+                    <StatusBarItem x:Name="statusText" Content=""/>
+                </StatusBar>
+            </Border>
+        </Grid>
     </DockPanel>
 </Window>

@@ -4,6 +4,42 @@
              xmlns:local="clr-namespace:MyJukeboxDbTools"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Control colors.-->
+        <Color x:Key="WindowBackground">#FF096292</Color>
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackground}"/>
+        <Color x:Key="MainGridBackground">#FF02132F</Color>
+        <SolidColorBrush x:Key="MainGridBackgroundBrush" Color="{StaticResource MainGridBackground}"/>
+        <Color x:Key="StackpanelBackground">#FF032034</Color>
+        <SolidColorBrush x:Key="StackpanelBackgroundBrush" Color="{StaticResource StackpanelBackground}"/>
+        <Color x:Key="ToolBarTrayBackground">LightBlue</Color>
+        <SolidColorBrush x:Key="ToolBarTrayBackgroundBrush" Color="{StaticResource ToolBarTrayBackground}"/>
+        <Color x:Key="SliderBackground">#FF8BCADE</Color>
+        <SolidColorBrush x:Key="SliderBackgroundBrush"  Color="{StaticResource SliderBackground}"/>
+        <Color x:Key="ListboxBackground">#FFC4F7F7</Color>
+        <SolidColorBrush x:Key="ListboxBackgroundBrush" Color="{StaticResource ListboxBackground}"/>
+        <Color x:Key="BorderMediumColor">#FF888888</Color>
+        <Color x:Key="ContextmenuBackground">LightBlue</Color>
+        <SolidColorBrush x:Key="ContextmenuBackgroundBrush" Color="{StaticResource ContextmenuBackground}"/>
+        <Color x:Key="ContextmenuForeground">Blue</Color>
+        <SolidColorBrush x:Key="ContextmenuForegroundBrush" Color="{StaticResource ContextmenuForeground}"/>
+        <Color x:Key="AlternatingRowBackground">#FFB9DFF7</Color>
+        <SolidColorBrush x:Key="AlternatingRowBackgroundBrush" Color="{StaticResource AlternatingRowBackground}"/>
+        <Color x:Key="RowBackground">#FFD2EAF7</Color>
+        <SolidColorBrush x:Key="RowBackgroundBrush" Color="{StaticResource RowBackground}"/>
+        <Style TargetType="CheckBox">
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+        </Style>
+        <!--Style für ImageButton-->
+        <Style x:Key="simpleImageButton" TargetType="Button">
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="ContentTemplate" Value="{StaticResource buttonUnpressed}"/>
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="ContentTemplate" Value="{StaticResource buttonPressed}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

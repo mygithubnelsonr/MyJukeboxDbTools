@@ -32,6 +32,7 @@ namespace MyJukeboxDbTools
                     DataGetSet dataGetSet = new DataGetSet();
                     await dataGetSet.CreareNewDbFullathListAsync();
                     dataGetSet = null;
+                    statusText.Content = "finish";
                 }
 
                 if (checkboxFullpathfromfile.IsChecked == true)
@@ -40,8 +41,8 @@ namespace MyJukeboxDbTools
                     DataGetSet dataGetSet = new DataGetSet();
                     await dataGetSet.CreateNewFileListAsync();
                     dataGetSet = null;
+                    statusText.Content = "finish";
                 }
-                statusText.Content = "finish";
 
                 buttonStart.IsEnabled = true;
             }
